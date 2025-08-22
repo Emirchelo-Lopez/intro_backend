@@ -5,7 +5,9 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "migrations": "yarn prisma migrate reset --force && yarn prisma migrate dev && yarn prisma generate && yarn run seed",
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
     "@prisma/client": "^6.14.0",

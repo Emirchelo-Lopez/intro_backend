@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 // instanciar el cliente de Prisma
 const prisma = new PrismaClient();
 
-//Funcion principal para que ejecute el seeding (sembrar/sembrado) de datos
+// Función principal para que ejecute el seeding (sembrar/sembrado) de datos
 export async function runSeed() {
   console.log("Iniciando el proceso de siembra de datos...");
   // limpiar la base de datos antes de insertar/sembrar datos nuevos
@@ -80,7 +80,7 @@ export async function runSeed() {
         },
         {
           name: "Cámara Web",
-          description: "Cámara web HD para videollamadas",
+          description: "Cámara web HD para video llamadas",
           price: 800.0,
           stock: 35,
         },
@@ -100,7 +100,7 @@ export async function runSeed() {
     // captura y muestra cualquier error que ocurra durante el proceso
     console.error("Error al ejecutar el seed:", error);
   } finally {
-    // cierra la conexion con la base de datos
+    // cierra la conexión con la base de datos
     await prisma.$disconnect();
     console.log("Conexión con la base de datos cerrada.");
   }
